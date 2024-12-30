@@ -18,13 +18,13 @@ find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
 # Make googletest available if FBstab is the main project.
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME))
-include(cmake/googletest.cmake)
-fetch_googletest(
-    ${PROJECT_SOURCE_DIR}/cmake
-    ${PROJECT_BINARY_DIR}/googletest)
-enable_testing()
-endif()
+# if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME))
+# include(cmake/googletest.cmake)
+# fetch_googletest(
+#     ${PROJECT_SOURCE_DIR}/cmake
+#     ${PROJECT_BINARY_DIR}/googletest)
+# enable_testing()
+# endif()
 
 # The cmake build system isn't used for debugging,
 # so default to an optimized build.
